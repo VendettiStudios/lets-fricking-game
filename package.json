@@ -1,5 +1,5 @@
 {
-  "name": "tech-friends",
+  "name": "lets-frickin-game",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -10,13 +10,12 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^5.1.0"
-  },
   "dependencies": {
-    "apollo-server-express": "^3.10.2"
+    "apollo-server-express": "^3.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
