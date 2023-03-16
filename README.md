@@ -80,7 +80,7 @@ This project is licensed under an MIT license
 npm i
 ```
 
-### Environmental Variables
+### Environmental Variables (Place within server folder, not root)
 
 ```
 MONGODB_URI
