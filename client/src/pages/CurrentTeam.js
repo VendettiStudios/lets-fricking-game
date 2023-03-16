@@ -13,7 +13,8 @@ import wow from '../gameImages/wow.jpeg';
 const CurrentTeam = () => {
     const { loading, data } = useQuery(QUERY_MY_TEAM);
     console.log(data);
-    function createImg (data)  {
+
+    function createImg(data) {
         let gameImg;
         switch (data) {
             case 'Destiny':
@@ -31,35 +32,39 @@ const CurrentTeam = () => {
                 break;
         }
     }
+
     return (
         <div>
             {loading ? (
                 <Box sx={{ display: 'flex' }}>
                     <CircularProgress />
                 </Box>
-            ) : (
+            ) : data && data.myTeam ? (
                 <Box sx={{ m: 5 }}>
                     <Card sx={{ display: 'block', justifyContent: 'center', textAlign: 'center', width: "75%", m: 'auto' }}>
                         <CardActionArea>
                             <CardMedia
                                 component='img'
                                 height='35%'
-                                image={createImg(data.myTeam.game)}
-
+                                image={data.myTeam?.game && createImg(data.myTeam.game)}
                             />
                             <CardContent>
-                            <Typography variant='h2' component='h1'>{data.myTeam.name}</Typography>
-                            <Typography variant='h3' component='h2'>{data.myTeam.game}</Typography>
-                            <Typography>{data.myTeam.deviceType}</Typography>
+                                <Typography variant='h2' component='h1'>{data.myTeam.name}</Typography>
+                                <Typography variant='h3' component='h2'>{data.myTeam.game}</Typography>
+                                <Typography>{data.myTeam.deviceType}</Typography>
 
-                            {/* may be null for owner */}
-                            <Typography>{data.myTeam.owner.username}</Typography>
-                            {data.myTeam.squadMembers.map(squadMember => (
-                                console.log(squadMember)
-                            ))}
+                                {/* may be null for owner */}
+                                <Typography>{data.myTeam.owner.username}</Typography>
+                                {data.myTeam.squadMembers.map(squadMember => (
+                                    console.log(squadMember)
+                                ))}
                             </CardContent>
                         </CardActionArea>
                     </Card>
+                </Box>
+            ) : (
+                <Box sx={{ m: 5 }}>
+                    <Typography>You are not part of a team yet!</Typography>
                 </Box>
             )}
         </div>

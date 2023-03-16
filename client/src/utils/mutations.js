@@ -26,10 +26,10 @@ export const LOGIN = gql`
 `;
 
 export const EDIT_TAGS = gql`
-  mutation Mutation($xboxUsername: String, $psnUsername: String, $steamUsername: String, $nintendoUsername: String) {
-    editTags(xboxUsername: $xboxUsername, psnUsername: $psnUsername, steamUsername: $steamUsername, nintendoUsername: $nintendoUsername) {
+  mutation Mutation($XboxUsername: String, $psnUsername: String, $steamUsername: String, $nintendoUsername: String) {
+    editTags(XboxUsername: $XboxUsername, psnUsername: $psnUsername, steamUsername: $steamUsername, nintendoUsername: $nintendoUsername) {
       username
-      xboxUsername
+      XboxUsername
       psnUsername
       nintendoUsername
       steamUsername
@@ -51,7 +51,7 @@ export const ADD_TEAM = gql`
       squadMembers {
         username
         email
-        xboxUsername
+        XboxUsername
         psnUsername
         steamUsername
         nintendoUsername

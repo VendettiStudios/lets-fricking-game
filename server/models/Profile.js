@@ -20,7 +20,7 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  xboxUsername: {
+  XboxUsername: {
     type: String,
   },
   psnUsername: {

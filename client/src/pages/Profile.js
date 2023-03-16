@@ -32,7 +32,7 @@ const Profile = () => {
         return rows = [
             createTable("Username", data.me.username || "N/A"),
             createTable("Email", data.me.email || "N/A"),
-            createTable("Xbox Username", data.me.xboxUsername || "N/A"),
+            createTable("Xbox Username", data.me.XboxUsername || "N/A"),
             createTable("Playstation Username", data.me.psnUsername || "N/A"),
             createTable("Steam Username", data.me.steamUsername || "N/A"),
             createTable("Nintendo Username", data.me.nintendoUsername || "N/A"),

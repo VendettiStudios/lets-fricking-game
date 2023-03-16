@@ -76,10 +76,10 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    editTags: async (parent, {xboxUsername, psnUsername, steamUsername, nintendoUsername}, context) => {
+    editTags: async (parent, {XboxUsername, psnUsername, steamUsername, nintendoUsername}, context) => {
       if(context.user){
         const updatedUser = await Profile.findOneAndUpdate({_id: context.user._id}, {
-          xboxUsername,
+          XboxUsername,
           psnUsername,
           steamUsername,
           nintendoUsername,

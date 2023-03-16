@@ -26,7 +26,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      xboxUsername
+      XboxUsername
       psnUsername
       steamUsername
       nintendoUsername
@@ -53,7 +53,7 @@ export const QUERY_TEAMS = gql`
       squadMembers {
         username
         email
-        xboxUsername
+        XboxUsername
         psnUsername
         steamUsername
         nintendoUsername
@@ -77,7 +77,7 @@ export const QUERY_MY_TEAM = gql`
       squadMembers {
         username
         email
-        xboxUsername
+        XboxUsername
         psnUsername
         steamUsername
         nintendoUsername

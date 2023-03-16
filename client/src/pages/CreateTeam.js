@@ -118,7 +118,7 @@ const CreateTeam = () => {
                         onChange={handleChange}
                     >
                         <MenuItem value={"Cross-Console"}>Cross-Console</MenuItem>
-                        <MenuItem value={"XBox"}>XBox</MenuItem>
+                        <MenuItem value={"Xbox"}>Xbox</MenuItem>
                         <MenuItem value={"PSN"}>PSN</MenuItem>
                         <MenuItem value={"Steam"}>Steam</MenuItem>
                         <MenuItem value={"Nintendo"}>Nintendo</MenuItem>

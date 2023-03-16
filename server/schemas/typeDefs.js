@@ -6,7 +6,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    xboxUsername: String
+    XboxUsername: String
     psnUsername: String
     steamUsername: String
     nintendoUsername: String
@@ -40,7 +40,7 @@ const typeDefs = gql`
   type Mutation {
     addProfile(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    editTags(xboxUsername: String, psnUsername: String, steamUsername: String, nintendoUsername: String): Profile
+    editTags(XboxUsername: String, psnUsername: String, steamUsername: String, nintendoUsername: String): Profile
     addTeam(name: String!, squadSize: Int!, game: String!, deviceType: String!, skill: String!): Team
     deleteTeam(teamId: ID!, profileId: ID!): Team
     joinTeam(teamId: ID!): Team
